@@ -28,7 +28,7 @@ f6a42c - orange
 .orange {
     color: #f6a42c;
     font-weight: bold;
-    font-size: 1.2em;
+    font-size: 1em;
     padding: 2rem 0;
 }
 .question {
@@ -43,7 +43,7 @@ nav {
     padding: 1rem;
 }
 h1 {
-    font-size: 3rem;
+    font-size: 2em;
     font-family: Spartan;
     font-weight: bold;
     letter-spacing: -0.25rem;
