@@ -28,11 +28,12 @@ f6a42c - orange
 .orange {
     color: #f6a42c;
     font-weight: bold;
+    font-size: 1.2em;
     padding: 2rem 0;
 }
 .question {
     font-family: Klein;
-    font-size: 3em;
+    font-size: 2em;
 }
 
 
@@ -42,7 +43,7 @@ nav {
     padding: 1rem;
 }
 h1 {
-    font-size: 4rem;
+    font-size: 3rem;
     font-family: Spartan;
     font-weight: bold;
     letter-spacing: -0.25rem;
@@ -53,14 +54,15 @@ button{
     background-color: white;
     padding: .5rem;
     font-family: Spartan;
+    font-size: 1.2em;
     font-weight: bold;
 }
 
+section{
+    padding: 2rem;
+}
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-section{
-    padding: 2rem;
 }
