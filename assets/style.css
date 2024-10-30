@@ -40,7 +40,7 @@ f6a42c - orange
 nav {
     display: flex;
     justify-content: center;
-    padding: 1rem;
+    padding: 1rem 2rem;
 }
 h1 {
     font-size: 2em;
