@@ -3,6 +3,7 @@
 fbeba1 - yellow
 4c62b7 - purple
 f6a42c - orange
+ffffef - off-white
 
 */
 
@@ -36,7 +37,7 @@ nav {
     display: flex;
     padding: 1rem 2rem;
 }
-h1 {
+h1.logo {
     font-size: 2em;
     font-family: Spartan;
     font-weight: bold;
@@ -45,7 +46,7 @@ h1 {
 
 button{
     border-style: none;
-    background-color: white;
+    background-color: #ffffef;
     padding: .5rem;
     font-family: Spartan;
     font-size: 1.2em;
@@ -92,7 +93,7 @@ img {
 .orange {
     color: #f6a42c;
     font-weight: bold;
-    font-size: 0.8em;
+    font-size: 0.9em;
     padding: 2rem 0;
 }
 
