@@ -114,8 +114,10 @@ section.ending {
 section.ending h3 {
     padding: 0;
     background-color: #4c62b7;
+    font-size: 1.5em;
 }
 section.ending button {
-    font-size: .6em;
+    font-size: .8em;
+    margin: 1rem 0;
 }
 
