@@ -43,7 +43,12 @@ nav {
     font-family: Spartan;
     font-weight: bold;
     letter-spacing: -0.25rem;
+    color: #ffffef;
+    background-color: #4c62b7;
+    text-align: end;
+    padding-top: 2rem;
 }
+
 
 button{
     border-style: none;
@@ -114,9 +119,3 @@ section.ending button {
     font-size: .6em;
 }
 
-h2.logo {
-    color: #ffffef;
-    background-color: #4c62b7;
-    text-align: end;
-    padding-top: 2rem;
-}
