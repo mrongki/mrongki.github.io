@@ -37,7 +37,8 @@ nav {
     display: flex;
     padding: 1rem 2rem;
 }
-h1.logo {
+
+.logo {
     font-size: 2em;
     font-family: Spartan;
     font-weight: bold;
@@ -100,4 +101,22 @@ img {
 .catch-up {
     background-color: #4c62b7;
     padding: 1rem;
+}
+
+section.ending {
+    background-color: #4c62b7;
+}
+section.ending h3 {
+    padding: 0;
+    background-color: #4c62b7;
+}
+section.ending button {
+    font-size: .6em;
+}
+
+h2.logo {
+    color: #ffffef;
+    background-color: #4c62b7;
+    text-align: end;
+    padding-top: 2rem;
 }
