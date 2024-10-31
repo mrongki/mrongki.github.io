@@ -25,12 +25,7 @@ f6a42c - orange
     font-family: Spartan;
 }
 
-.orange {
-    color: #f6a42c;
-    font-weight: bold;
-    font-size: 1em;
-    padding: 2rem 0;
-}
+
 .question {
     font-family: Klein;
     font-size: 2em;
@@ -39,7 +34,6 @@ f6a42c - orange
 
 nav {
     display: flex;
-    justify-content: center;
     padding: 1rem 2rem;
 }
 h1 {
@@ -83,4 +77,26 @@ img {
     background-color: #4c62b7;
     padding: 2rem;
     padding-bottom: 0rem;
+}
+
+
+.socmed-links{
+    background-color: #4c62b7;
+    font-size: .6em;
+    /* margin-top: 1em; */
+    display: flex;
+    justify-content: space-evenly;
+    width: 80%;
+}
+
+.orange {
+    color: #f6a42c;
+    font-weight: bold;
+    font-size: 1em;
+    padding: 2rem 0;
+}
+
+.catch-up {
+    background-color: #4c62b7;
+    padding: 1rem;
 }
