@@ -1,11 +1,51 @@
-/* COLORS */
-/* 
-fbeba1 - yellow
-4c62b7 - purple
-f6a42c - orange
-ffffef - off-white
-
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
 */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
 
 @font-face {
     font-family: Klein;
@@ -16,108 +56,153 @@ ffffef - off-white
     src: url("./fonts/LeagueSpartan-VariableFont_wght.ttf");
 }
 
+:root {
+    --yellow-clr: #fbeba1;
+    --purple-clr: #4c62b7;
+    --orange-clr: #f6a42c;
+    --white-clr: #ffffef;
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    background-color: #fbeba1;
-    color: #4c62b7;
-    font-family: Spartan;
+    --ff-primary: Spartan;
+    --ff-secondary: Klein;
+
+    --fw-n: 400;
+    --fw-b: 700;
+    --fw-eb: 800;
 }
 
-
-.question {
-    font-family: Klein;
-    font-size: 2em;
+body {
+    color: var(--purple-clr);
+    background-color: var(--yellow-clr);
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-eb);
 }
 
-
-nav {
-    display: flex;
-    padding: 1rem 2rem;
-}
-
-.logo {
-    font-size: 2em;
-    font-family: Spartan;
-    font-weight: bold;
-    letter-spacing: -0.25rem;
-    color: #ffffef;
-    background-color: #4c62b7;
-    text-align: end;
-    padding-top: 2rem;
-}
-
-
-button{
-    border-style: none;
-    background-color: #ffffef;
-    padding: .5rem;
-    font-family: Spartan;
-    font-size: 1.2em;
-    font-weight: bold;
-}
-
-section{
-    padding: 2rem;
-}
 .container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
+    /* flex-grow: 1; */
 }
-img {
-    width: 70%;
-    margin-top: 2rem;
-}
-.intro-card {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   background-color: #4c62b7;
-   padding-bottom: 2rem;
-    
-}
-.intro-text {
-    color: white;
-    background-color: #4c62b7;
-    padding: 2rem;
-    padding-bottom: 0rem;
+.container > * {
+    /* border: solid aquamarine 2px; */
+    padding: 5rem;
+    flex-basis: 100vw;
 }
 
 
-.socmed-links{
-    background-color: #4c62b7;
-    font-size: .6em;
-    /* margin-top: 1em; */
+.help {
     display: flex;
-    justify-content: space-evenly;
-    width: 80%;
+}
+
+.help svg {
+    width: 30px;
+    height: 30px;
+    fill: var(--white-clr);
+    /* background-color: var(--purple-clr); */
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+
+#circle {
+    width: 25px;
+    height: 25px;
+    background-color: var(--purple-clr);
+    border-radius: 50%;
+    position: relative;
+    top: -30px;
+    left: 3px;
+    z-index: -99;
+}
+
+.opening-text {
+    font-family: var(--ff-secondary);
+    font-size: 3rem;
+    width: 60%;
 }
 
 .orange {
-    color: #f6a42c;
-    font-weight: bold;
-    font-size: 0.9em;
     padding: 2rem 0;
+    color: var(--orange-clr);
+    font-size: 1rem;
+    font-weight: var(--fw-eb);
 }
 
-.catch-up {
-    background-color: #4c62b7;
+.link-btn {
+    border: 0;
     padding: 1rem;
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-eb);
+    font-size: 1rem;
+    color: var(--purple-clr);
+}
+.link-btn:hover {
+    text-shadow: 2px 0px 8px var(--orange-clr);
 }
 
-section.ending {
-    background-color: #4c62b7;
+
+.socmed-links {
+    display: flex;
+    gap: 2rem;
+    /* justify-content: center; */
 }
-section.ending h3 {
+.profile-card {
+    display: flex;
+    align-items: center;
     padding: 0;
-    background-color: #4c62b7;
-    font-size: 1.5em;
+    background-color: var(--purple-clr);
+    color: var(--white-clr);
+    font-weight: var(--fw-b);
+    font-size: 1rem;
+    padding: 3rem;
+    /* outline: solid green 2px; */
 }
-section.ending button {
-    font-size: .8em;
-    margin: 1rem 0;
+
+.profile-text {
+    padding-bottom: 1rem;
+    /* border: solid black 1px */
+}
+
+.profile-card-child:first-child {
+    flex-basis: 70vw;
+}
+
+.profile-card-child img{
+    max-width: 100%;
+}
+
+.worked-with {
+    display:flex;
+    flex-basis: 50%;
+    flex-grow: 1;
+}
+.worked-with > * {
+    /* outline: solid black 1px; */
+    padding: 0 1rem;
+}
+.worked-with > *:last-of-type {
+    padding-top: 1rem;
+}
+
+.worked-with-lead {
+    font-size: 2rem;
+}
+.company-img {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+.company-img > img {
+    max-height: 4rem;
+}
+
+.ending {
+    padding: 0;
+    background-color: var(--purple-clr);
+    color: var(--white-clr);
+    font-weight: var(--fw-b);
+    font-size: 2rem;
+    padding: 3rem;
+    flex-basis: 100%;
+    outline: solid black 1px;
 }
 
