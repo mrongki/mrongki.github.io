@@ -68,6 +68,8 @@ table {
     --fw-n: 400;
     --fw-b: 700;
     --fw-eb: 800;
+
+    --fs-sm: 1rem;
 }
 
 body {
@@ -77,16 +79,12 @@ body {
     font-weight: var(--fw-eb);
 }
 
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    /* flex-grow: 1; */
-}
+
 .container > * {
     /* border: solid aquamarine 2px; */
     padding: 5rem;
-    flex-basis: 100vw;
 }
+
 
 
 .help {
@@ -115,14 +113,14 @@ body {
 
 .opening-text {
     font-family: var(--ff-secondary);
-    font-size: 3rem;
-    width: 60%;
+    font-size: calc(var(--fs-sm) * 3);
+
 }
 
 .orange {
     padding: 2rem 0;
     color: var(--orange-clr);
-    font-size: 1rem;
+    font-size: calc(var(--fs-sm) * 1);
     font-weight: var(--fw-eb);
 }
 
@@ -131,7 +129,7 @@ body {
     padding: 1rem;
     font-family: var(--ff-primary);
     font-weight: var(--fw-eb);
-    font-size: 1rem;
+    font-size: calc(var(--fs-sm) * 1);
     color: var(--purple-clr);
 }
 .link-btn:hover {
@@ -147,11 +145,11 @@ body {
 .profile-card {
     display: flex;
     align-items: center;
-    padding: 0;
+    justify-content: center;
     background-color: var(--purple-clr);
     color: var(--white-clr);
     font-weight: var(--fw-b);
-    font-size: 1rem;
+    font-size: calc(var(--fs-sm) * 1);
     padding: 3rem;
     /* outline: solid green 2px; */
 }
@@ -163,9 +161,11 @@ body {
 
 .profile-card-child:first-child {
     flex-basis: 70vw;
+
+    /* outline: solid red 2px; */
 }
 
-.profile-card-child img{
+.profile-card-img img{
     max-width: 100%;
 }
 
@@ -203,6 +203,45 @@ body {
     font-size: 2rem;
     padding: 3rem;
     flex-basis: 100%;
-    outline: solid black 1px;
+    /* outline: solid black 1px; */
 }
 
+@media screen and (min-width: 768px){
+    .opening-text {
+        width: 60%;
+    }
+    
+    .container > * {
+        padding: 8rem;
+    }
+
+    .profile-card {
+        padding: 8rem;
+    }
+}
+
+@media screen and (min-width: 992px){
+
+    .container > * {
+        padding: 10rem 15rem;
+    }
+
+    .profile-card {
+        padding: 10rem 15rem;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    :root {
+        --fs-sm: 1.2rem;
+    }
+    
+    .container > * {
+
+        padding: 10rem 20rem;
+    }
+
+    .profile-card {
+        padding: 10rem 20rem;
+    }
+}
