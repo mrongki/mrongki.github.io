@@ -140,6 +140,7 @@ img {
 @media (max-width: 600px) {
     body {
         font-size: 10px;
+        text-align: center;
     }
 
     #circle{
@@ -161,13 +162,9 @@ img {
     }
 
     .profile-content, .opening-content {
-        text-align: center;
         width: 100%;
         margin-top: 3em;
     
-    }
-    .opening-content__text {
-        text-align: start;
     }
     
     .profile-img {
