@@ -114,7 +114,7 @@ img {
     letter-spacing: -1px;
 }
 
-.profile {
+.profile, .ending {
     background-color: var(--purple-clr);
     color: var(--white-clr);
 }
@@ -178,6 +178,17 @@ img {
     animation: scroll 30s linear infinite;
 }
 
+.ending {
+    padding-block: 5em;
+}
+
+.ending a {
+    margin-bottom: 3em;
+}
+.logo {
+    letter-spacing: -2px;
+    text-align: end;
+}
 @keyframes scroll {
     to {
         transform: translate(-50%);
@@ -230,4 +241,12 @@ img {
         max-height: 50px;
     }
 
+    .ending {
+        padding-block: 4em;
+    }
+
+    .logo {
+        letter-spacing: -2px;
+        text-align: center;
+    }
 }
