@@ -147,6 +147,9 @@ a:hover {
     gap: 2em;
     justify-content: center;
 }
+.profile__links > * {
+    font-size: .75rem;
+}
 
 .clients {
     padding: 2em 0;
