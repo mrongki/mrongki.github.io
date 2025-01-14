@@ -7,6 +7,11 @@ a {
     display: inline-block;
 }
 
+ul, ol, li {
+    margin: 0;
+    padding: 0;
+}
+
 
 @font-face {
     font-family: KleinBlack;
@@ -28,6 +33,7 @@ a {
     --purple-clr: #4c62b7;
     --orange-clr: #f6a42c;
     --white-clr: #ffffef;
+    --black-clr: #000010;
 
     --ff-ls: League Spartan;
     --ff-kleinbold: KleinBlack;
@@ -37,7 +43,9 @@ a {
     --fw-b: 700;
     --fw-eb: 800;
 
-    --fs-sm: 1rem;
+    --fs-sm: .5rem;
+    --fs-md: .75rem;
+    --fs-lg: 1rem;
 }
 
 body {
@@ -89,6 +97,9 @@ a:hover {
 
 .opening {
     padding-block: 1em;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
 }
 
 .opening__text {
@@ -144,7 +155,7 @@ a:hover {
 }
 
 .profile__text {
-    font-size: 1rem;
+    font-size: var(--fs-md);
 }
 .profile__links {
     display: flex;
@@ -161,6 +172,7 @@ a:hover {
 
 .clients__title {
     padding-block-end: 1em;
+    /* position: sticky; */
 }
 .clients__company-img {
     max-width: 500px;
@@ -171,7 +183,7 @@ a:hover {
 }
 
 .clients__company-img > img {
-    max-height: 30px;
+    max-height: 55px;
     margin: 0 auto;
 }
 
@@ -190,7 +202,44 @@ a:hover {
 }
 
 .clients__content--text {
-    color: black;
+    color: var(--black-clr);
     padding-block-start: 1em;
 }
 
+.milestones, .pipeline {
+    padding-block-end: 1em;
+}
+
+.milestones__title {
+    padding-block: 1em;
+}
+
+.pipeline__title {
+    padding-bottom: 1em;
+}
+
+.milestones__items, .pipeline__items {
+    font-size: var(--fs-md);
+    font-family: var(--ff-klein);
+    color: var(--black-clr);
+    padding-inline-start: 1rem;
+}
+
+.milestones__items, .pipeline__items > * {
+    padding-block-end: 0.5rem;
+}
+
+.milestones__items--items > * {
+    padding-inline-start: 1rem;
+}
+
+
+.pipeline__text {
+    font-size: var(--fs-md);
+    font-family: var(--ff-klein);
+    color: var(--black-clr);
+    padding-bottom: 1rem; 
+}
+.pipeline__text:nth-of-type(2) {
+    padding-bottom: 0;
+}
