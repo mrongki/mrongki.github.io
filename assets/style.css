@@ -10,6 +10,7 @@ a {
 ul, ol, li {
     margin: 0;
     padding: 0;
+    list-style: none;
 }
 
 
@@ -98,13 +99,17 @@ a:hover {
 
 .opening {
     padding-block: 1em;
-    min-height: 100vh;
+    /* min-height: 100vh; */
 }
 
-.opening > .container:first-of-type {
-    min-height: 80vh;
+/* .opening > .container:nth-of-type(1) {
+    min-height: 90vh;
     padding-block-start: 20vh;
 
+} */
+
+.opening > .container:nth-of-type(2) {
+    min-height: 10vh;
 }
 
 .opening__text {
@@ -149,16 +154,31 @@ a:hover {
     font-family: var(--ff-klein);
     text-align: center;
     padding-block-end: 4em;
-    min-height: 100vh;
+    /* min-height: 100vh; */
     display: flex;
     align-items: center;
 }
+
 
 .face-card {
     padding: 5em 0;
     width: 15rem;
     margin: 0 auto;
+    /* animation: appear 2s linear;
+    animation-timeline: view(); */
 }
+
+@keyframes appear {
+    from{
+        opacity: 0;
+        scale: 0.5;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+
 
 .profile__text {
     font-size: var(--fs-lg);
@@ -169,11 +189,15 @@ a:hover {
     justify-content: center;
 }
 
+/* .profile__first {
+    display: none;
+}
+
 .profile__second {
     position: absolute;
     top: 279px;
     display: none;
-}
+} */
 
 .clients {
     padding: 2em 0;
@@ -192,7 +216,7 @@ a:hover {
 }
 
 .clients__company-img > img {
-    max-height: 55px;
+    max-height: 45px;
     margin: 0 auto;
 }
 
@@ -210,9 +234,60 @@ a:hover {
     font-size: 1rem;
 }
 
+.clients__content--clip {
+    padding-block-start: 3em;
+    display: flex;
+    gap:1em;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.clients__content--clip > div{
+    min-height: 100px;
+    min-width: 100px;
+    color:var(--white-clr);
+    background: #4c62b7;
+    text-align: center;
+    padding: 40px 0;
+
+}
+
+
+.clients__content--socmed {
+    padding-block-start: 3em;
+    display: flex;
+    gap: 1em;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+
+.clients__content--socmed > div {
+    background-color: var(--purple-clr);
+    color:var(--white-clr);
+    text-align: center;
+    min-height: 20em;
+    min-width: 10em;
+    padding-top: 5em;
+}
+
 .clients__content--text {
-    color: var(--black-clr);
+    color: var(--purple-clr);
+    font-family: var(--ff-klein);
     padding-block-start: 1em;
+    text-align: center;
+}
+.clients__content--text > p {
+    padding-block: 1em;
+
+}
+
+/* .clients__content--clip {
+    padding-block-start: 2em;
+} */
+
+.clients__content--img {
+    padding-inline: 3em;
 }
 
 .milestones, .pipeline {
@@ -232,10 +307,12 @@ a:hover {
     font-family: var(--ff-klein);
     color: var(--black-clr);
     padding-inline-start: 1rem;
+    text-align: center;
 }
 
-.milestones__items, .pipeline__items > * {
-    padding-block-end: 0.5rem;
+.milestones__items > *, .pipeline__items > * {
+    padding-block-end: 1em;
+
 }
 
 .milestones__items--items > * {
